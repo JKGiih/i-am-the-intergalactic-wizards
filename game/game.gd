@@ -6,6 +6,8 @@ onready var alien = preload("res://alien.xml")
 func _ready():
 	var w = wizard.instance()
 	var a = alien.instance()
+	w.set_pos(Vector2(11000, 14000))
+	a.set_pos(Vector2(11000, 15000))
 	add_child(w)
 	add_child(a)
 
