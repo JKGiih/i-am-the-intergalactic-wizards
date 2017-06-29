@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="15" version="2.1" version_name="Godot Engine v2.1.3.stable.custom_build">
+<resource_file type="PackedScene" subresource_count="27" version="2.1" version_name="Godot Engine v2.1.3.stable.custom_build">
 	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://alien.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://planet4.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://planet2.png" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://sun.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://planet5.png" type="Texture" index="8"></ext_resource>
-	<ext_resource path="res://planet3.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://planet1.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://planet6.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://alien.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://wizard.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://planet2.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://planet3.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://planet6.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://planet5.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://planet1.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://planet4.png" type="Texture" index="7"></ext_resource>
 	<resource type="RectangleShape2D" path="local://3">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 10, 10 </vector2>
@@ -56,14 +56,354 @@
 		<bool name="tracks/1/imported"> False </bool>
 		<dictionary name="tracks/1/keys" shared="false">
 			<string> "times" </string>
-			<real_array  len="1"> 				0 </real_array>
+			<real_array  len="9"> 				0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="1"> 				1 </real_array>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
 			<string> "update" </string>
 			<int> 0 </int>
 			<string> "values" </string>
-			<array  len="1" shared="false">
+			<array  len="9" shared="false">
 				<vector2> 13547.9, 13686.9 </vector2>
+				<vector2> 14347.9, 14886.9 </vector2>
+				<vector2> 15547.9, 15686.9 </vector2>
+				<vector2> 16723.9, 14853.6 </vector2>
+				<vector2> 17500, 13820.2 </vector2>
+				<vector2> 16612, 12686.9 </vector2>
+				<vector2> 15524, 11753.6 </vector2>
+				<vector2> 14435.9, 12620.2 </vector2>
+				<vector2> 13547.9, 13686.9 </vector2>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CircleShape2D" path="local://6">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://7">
+		<string name="resource/name"> "rotation" </string>
+		<real name="length"> 4 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/rot" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 1, 2, 3, 4 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<real> 0 </real>
+				<real> 90 </real>
+				<real> 180 </real>
+				<real> 270 </real>
+				<real> 360 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="9"> 				0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="9" shared="false">
+				<vector2> 13547.9, 13686.9 </vector2>
+				<vector2> 14347.9, 14886.9 </vector2>
+				<vector2> 15547.9, 15686.9 </vector2>
+				<vector2> 16723.9, 14853.6 </vector2>
+				<vector2> 17500, 13820.2 </vector2>
+				<vector2> 16612, 12686.9 </vector2>
+				<vector2> 15524, 11753.6 </vector2>
+				<vector2> 14435.9, 12620.2 </vector2>
+				<vector2> 13547.9, 13686.9 </vector2>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CircleShape2D" path="local://8">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://9">
+		<string name="resource/name"> "rotation" </string>
+		<real name="length"> 8 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/rot" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 2, 4, 6, 8 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<real> 0 </real>
+				<real> 90 </real>
+				<real> 180 </real>
+				<real> 270 </real>
+				<real> 360 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="9"> 				0, 1, 2, 3, 4, 5, 6, 7.1, 8 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="9" shared="false">
+				<vector2> 11547.9, 13686.9 </vector2>
+				<vector2> 13107.9, 16986.9 </vector2>
+				<vector2> 15547.9, 17686.9 </vector2>
+				<vector2> 17947.9, 16686.9 </vector2>
+				<vector2> 19547.9, 13686.9 </vector2>
+				<vector2> 17547.9, 11186.9 </vector2>
+				<vector2> 15547.9, 10686.9 </vector2>
+				<vector2> 13047.9, 12036.9 </vector2>
+				<vector2> 11547.9, 13686.9 </vector2>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CircleShape2D" path="local://10">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://11">
+		<string name="resource/name"> "rotation" </string>
+		<real name="length"> 16 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/rot" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 4, 8, 12, 16 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<real> 0 </real>
+				<real> 90 </real>
+				<real> 180 </real>
+				<real> 270 </real>
+				<real> 360 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 4, 8, 12.1, 16 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<vector2> 8547.9, 13686.9 </vector2>
+				<vector2> 16047.9, 7686.9 </vector2>
+				<vector2> 23547.9, 13686.9 </vector2>
+				<vector2> 14860.4, 19686.9 </vector2>
+				<vector2> 8547.9, 13686.9 </vector2>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CircleShape2D" path="local://12">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://13">
+		<string name="resource/name"> "rotation" </string>
+		<real name="length"> 24 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/rot" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 6.4, 13, 18.7, 24 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<real> 0 </real>
+				<real> 90 </real>
+				<real> 180 </real>
+				<real> 270 </real>
+				<real> 360 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="9"> 				0, 3.2, 6.4, 9.7, 12.9, 16, 18.7, 21.5, 24 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="9" shared="false">
+				<vector2> 6547.9, 13686.9 </vector2>
+				<vector2> 10261.1, 9186.9 </vector2>
+				<vector2> 15974.3, 6686.9 </vector2>
+				<vector2> 21834.7, 9240.75 </vector2>
+				<vector2> 25547.9, 13686.9 </vector2>
+				<vector2> 21241.6, 19497.2 </vector2>
+				<vector2> 15620, 22686.9 </vector2>
+				<vector2> 9827.18, 18932.2 </vector2>
+				<vector2> 6547.9, 13686.9 </vector2>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CircleShape2D" path="local://14">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://15">
+		<string name="resource/name"> "rotation" </string>
+		<real name="length"> 32 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/rot" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 8, 16, 24, 32 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<real> 0 </real>
+				<real> 90 </real>
+				<real> 180 </real>
+				<real> 270 </real>
+				<real> 360 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="9"> 				0, 4.1, 8.1, 12.1, 16.1, 20.1, 24, 28.1, 31.9 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="9" shared="false">
+				<vector2> 4547.9, 13686.9 </vector2>
+				<vector2> 10150.4, 7937.52 </vector2>
+				<vector2> 15616.2, 5686.9 </vector2>
+				<vector2> 22082.1, 9686.9 </vector2>
+				<vector2> 26547.9, 13686.9 </vector2>
+				<vector2> 21978.3, 20256.5 </vector2>
+				<vector2> 15547.9, 24686.9 </vector2>
+				<vector2> 9239.04, 19978 </vector2>
+				<vector2> 4547.9, 13686.9 </vector2>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CircleShape2D" path="local://16">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://17">
+		<string name="resource/name"> "rotation" </string>
+		<real name="length"> 48 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/rot" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 13, 25.6, 36.1, 47.9 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<real> 0 </real>
+				<real> 90 </real>
+				<real> 180 </real>
+				<real> 270 </real>
+				<real> 360 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="9"> 				0, 6.3, 13, 19.6, 25.7, 31.4, 36.5, 42.1, 48 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="9" shared="false">
+				<vector2> 1547.9, 13686.9 </vector2>
+				<vector2> 8380.98, 23440.7 </vector2>
+				<vector2> 15647.9, 29686.9 </vector2>
+				<vector2> 25449.4, 21893.8 </vector2>
+				<vector2> 30659.8, 14691.2 </vector2>
+				<vector2> 22748.5, 5960.78 </vector2>
+				<vector2> 15669.9, 1938.87 </vector2>
+				<vector2> 6793.12, 7659.65 </vector2>
+				<vector2> 1547.9, 13686.9 </vector2>
 			</array>
 		</dictionary>
 
@@ -168,11 +508,11 @@
 				<string> "autoplay" </string>
 				<string> "AnimationPlayer" </string>
 				<string> "planet1" </string>
+				<string> "transform/rot" </string>
 				<string> "planet1_sprite" </string>
 				<string> "planet1_collisionshape" </string>
 				<string> "planet1_rotation" </string>
 				<string> "planet2" </string>
-				<string> "transform/rot" </string>
 				<string> "planet2_sprite" </string>
 				<string> "planet2_collisionshape" </string>
 				<string> "planet2_rotation" </string>
@@ -201,9 +541,9 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="979"> 				-1, -1, 13, 0, -1, 12, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 4, 9, 5, 10, 6, 11, 7, 12, 8, 0, 0, 0, 20, 14, -1, 13, 3, 1, 4, 2, 5, 3, 6, 3, 7, 9, 8, 10, 9, 11, 10, 12, 15, 1, 16, 3, 17, 13, 18, 14, 19, 1, 0, 0, 0, 44, 21, -1, 22, 22, 15, 23, 1, 24, 16, 25, 17, 26, 1, 27, 0, 28, 0, 29, 18, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 2, 0, 47, 45, -1, 1, 46, 22, 0, 2, 0, 54, 48, -1, 6, 49, 1, 22, 23, 50, 24, 51, 16, 52, 1, 53, 18, 0, 2, 0, 55, 55, -1, 17, 22, 25, 56, 0, 57, 1, 58, 2, 59, 26, 60, 27, 61, 27, 62, 28, 63, 28, 64, 2, 65, 2, 66, 1, 67, 29, 68, 30, 69, 30, 70, 30, 71, 30, 0, 0, 0, 44, 72, -1, 22, 22, 31, 23, 1, 24, 32, 25, 33, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 6, 0, 47, 73, -1, 1, 46, 35, 0, 6, 0, 54, 74, -1, 6, 49, 1, 22, 36, 50, 37, 51, 32, 52, 1, 53, 18, 0, 0, 0, 44, 75, -1, 22, 22, 38, 23, 1, 24, 39, 25, 40, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 9, 0, 47, 76, -1, 1, 46, 41, 0, 9, 0, 54, 77, -1, 6, 49, 1, 22, 42, 50, 43, 51, 39, 52, 1, 53, 18, 0, 9, 0, 87, 78, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 88, -1, 22, 22, 48, 23, 1, 24, 39, 25, 49, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 13, 0, 47, 89, -1, 1, 46, 50, 0, 13, 0, 54, 90, -1, 6, 49, 1, 22, 51, 50, 52, 51, 39, 52, 1, 53, 18, 0, 13, 0, 87, 91, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 92, -1, 23, 22, 53, 93, 54, 23, 1, 24, 39, 25, 55, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 17, 0, 47, 94, -1, 1, 46, 56, 0, 17, 0, 54, 95, -1, 6, 49, 1, 22, 57, 50, 52, 51, 39, 52, 1, 53, 18, 0, 17, 0, 87, 96, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 97, -1, 22, 22, 58, 23, 1, 24, 39, 25, 55, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 21, 0, 47, 98, -1, 1, 46, 59, 0, 21, 0, 54, 99, -1, 6, 49, 1, 22, 57, 50, 52, 51, 39, 52, 1, 53, 18, 0, 21, 0, 87, 100, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 101, -1, 22, 22, 60, 23, 1, 24, 39, 25, 55, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 25, 0, 47, 102, -1, 1, 46, 61, 0, 25, 0, 54, 103, -1, 6, 49, 1, 22, 57, 50, 52, 51, 39, 52, 1, 53, 18, 0, 25, 0, 87, 104, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 105, -1, 22, 22, 62, 23, 1, 24, 39, 25, 55, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 29, 0, 47, 106, -1, 1, 46, 63, 0, 29, 0, 54, 107, -1, 6, 49, 1, 22, 57, 50, 52, 51, 39, 52, 1, 53, 18, 0, 29, 0, 87, 108, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 109, -1, 22, 22, 64, 23, 1, 24, 39, 25, 55, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 33, 0, 47, 110, -1, 1, 46, 65, 0, 33, 0, 54, 111, -1, 6, 49, 1, 22, 57, 50, 52, 51, 39, 52, 1, 53, 18, 0, 33, 0, 87, 112, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0 </int_array>
+			<int_array  len="989"> 				-1, -1, 13, 0, -1, 12, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 4, 9, 5, 10, 6, 11, 7, 12, 8, 0, 0, 0, 20, 14, -1, 13, 3, 1, 4, 2, 5, 3, 6, 3, 7, 9, 8, 10, 9, 11, 10, 12, 15, 1, 16, 3, 17, 13, 18, 14, 19, 1, 0, 0, 0, 44, 21, -1, 22, 22, 15, 23, 1, 24, 16, 25, 17, 26, 1, 27, 0, 28, 0, 29, 18, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 2, 0, 47, 45, -1, 1, 46, 22, 0, 2, 0, 54, 48, -1, 6, 49, 1, 22, 23, 50, 24, 51, 16, 52, 1, 53, 18, 0, 2, 0, 55, 55, -1, 17, 22, 25, 56, 0, 57, 1, 58, 2, 59, 26, 60, 27, 61, 27, 62, 28, 63, 28, 64, 2, 65, 2, 66, 1, 67, 29, 68, 30, 69, 30, 70, 30, 71, 30, 0, 0, 0, 44, 72, -1, 22, 22, 31, 23, 1, 24, 32, 25, 33, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 6, 0, 47, 73, -1, 1, 46, 35, 0, 6, 0, 54, 74, -1, 6, 49, 1, 22, 36, 50, 37, 51, 32, 52, 1, 53, 18, 0, 0, 0, 44, 75, -1, 22, 22, 38, 23, 1, 24, 39, 25, 40, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 9, 0, 47, 76, -1, 1, 46, 41, 0, 9, 0, 54, 77, -1, 6, 49, 1, 22, 42, 50, 43, 51, 39, 52, 1, 53, 18, 0, 9, 0, 87, 78, -1, 8, 79, 0, 80, 4, 81, 44, 82, 45, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 88, -1, 23, 22, 48, 89, 49, 23, 1, 24, 50, 25, 51, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 13, 0, 47, 90, -1, 1, 46, 52, 0, 13, 0, 54, 91, -1, 6, 49, 1, 22, 53, 50, 54, 51, 39, 52, 1, 53, 18, 0, 13, 0, 87, 92, -1, 8, 79, 0, 80, 4, 81, 44, 82, 55, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 93, -1, 23, 22, 56, 89, 57, 23, 1, 24, 58, 25, 59, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 17, 0, 47, 94, -1, 1, 46, 60, 0, 17, 0, 54, 95, -1, 6, 49, 1, 22, 61, 50, 54, 51, 39, 52, 1, 53, 18, 0, 17, 0, 87, 96, -1, 8, 79, 0, 80, 4, 81, 44, 82, 62, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 97, -1, 23, 22, 63, 89, 64, 23, 1, 24, 65, 25, 59, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 21, 0, 47, 98, -1, 1, 46, 66, 0, 21, 0, 54, 99, -1, 6, 49, 1, 22, 61, 50, 54, 51, 39, 52, 1, 53, 18, 0, 21, 0, 87, 100, -1, 8, 79, 0, 80, 4, 81, 44, 82, 67, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 101, -1, 23, 22, 68, 89, 69, 23, 1, 24, 70, 25, 59, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 25, 0, 47, 102, -1, 1, 46, 71, 0, 25, 0, 54, 103, -1, 6, 49, 1, 22, 61, 50, 54, 51, 39, 52, 1, 53, 18, 0, 25, 0, 87, 104, -1, 8, 79, 0, 80, 4, 81, 44, 82, 72, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 105, -1, 23, 22, 73, 89, 74, 23, 1, 24, 75, 25, 59, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 29, 0, 47, 106, -1, 1, 46, 76, 0, 29, 0, 54, 107, -1, 6, 49, 1, 22, 61, 50, 54, 51, 39, 52, 1, 53, 18, 0, 29, 0, 87, 108, -1, 8, 79, 0, 80, 4, 81, 44, 82, 77, 83, 2, 84, 19, 85, 46, 86, 47, 0, 0, 0, 44, 109, -1, 23, 22, 78, 89, 79, 23, 1, 24, 80, 25, 59, 26, 1, 27, 0, 28, 0, 29, 34, 30, 19, 31, 19, 32, 4, 33, 19, 34, 1, 35, 18, 36, 18, 37, 1, 38, 1, 39, 2, 40, 20, 41, 4, 42, 21, 43, 21, 0, 33, 0, 47, 110, -1, 1, 46, 81, 0, 33, 0, 54, 111, -1, 6, 49, 1, 22, 61, 50, 54, 51, 39, 52, 1, 53, 18, 0, 33, 0, 87, 112, -1, 8, 79, 0, 80, 4, 81, 44, 82, 82, 83, 2, 84, 19, 85, 46, 86, 47, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="66" shared="false">
+			<array  len="83" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -255,24 +595,41 @@
 				<array  len="0" shared="false">
 				</array>
 				<string> "rotation" </string>
-				<vector2> 13547.9, 13686.9 </vector2>
+				<vector2> 15058.7, 12124.2 </vector2>
+				<real> 289.242188 </real>
+				<resource  resource_type="Shape2D" path="local://6">  </resource>
 				<matrix32> 22.4585, -0, 0, 20.973, -8.20605, 12.2324 </matrix32>
 				<resource  external="4">  </resource>
 				<vector2> -8.20605, 12.2324 </vector2>
 				<vector2> 22.4585, 20.973 </vector2>
-				<vector2> 11547.9, 13686.9 </vector2>
-				<real> 257.12619 </real>
+				<resource  resource_type="Animation" path="local://7">  </resource>
+				<vector2> 17925.6, 16696.2 </vector2>
+				<real> 134.582428 </real>
+				<resource  resource_type="Shape2D" path="local://8">  </resource>
 				<matrix32> 22.4585, -0, 0, 20.973, -8.2065, 13.3413 </matrix32>
 				<resource  external="5">  </resource>
 				<vector2> -8.2065, 13.3413 </vector2>
-				<vector2> 9547.92, 13686.9 </vector2>
+				<resource  resource_type="Animation" path="local://9">  </resource>
+				<vector2> 12524.5, 17466.6 </vector2>
+				<real> 304.721497 </real>
+				<resource  resource_type="Shape2D" path="local://10">  </resource>
 				<resource  external="6">  </resource>
-				<vector2> 7547.92, 13686.9 </vector2>
+				<resource  resource_type="Animation" path="local://11">  </resource>
+				<vector2> 9925.35, 9593.77 </vector2>
+				<real> 40.931305 </real>
+				<resource  resource_type="Shape2D" path="local://12">  </resource>
 				<resource  external="7">  </resource>
-				<vector2> 5547.92, 13686.9 </vector2>
+				<resource  resource_type="Animation" path="local://13">  </resource>
+				<vector2> 6453.94, 16243 </vector2>
+				<real> 341.505402 </real>
+				<resource  resource_type="Shape2D" path="local://14">  </resource>
 				<resource  external="8">  </resource>
-				<vector2> 3547.92, 13686.9 </vector2>
+				<resource  resource_type="Animation" path="local://15">  </resource>
+				<vector2> 4722.76, 18218.8 </vector2>
+				<real> 20.265057 </real>
+				<resource  resource_type="Shape2D" path="local://16">  </resource>
 				<resource  external="9">  </resource>
+				<resource  resource_type="Animation" path="local://17">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
