@@ -3,6 +3,9 @@ extends Panel
 onready var wizard = preload("res://wizard.xml")
 onready var alien = preload("res://alien.xml")
 
+var wizards = 1
+var aliens = 69
+
 func _ready():
 	var w = wizard.instance()
 	var a = alien.instance()

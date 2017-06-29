@@ -21,8 +21,10 @@ func zoom_out(delta):
 func _process(delta):
 	var left_pressed = Input.is_action_pressed("ui_left")
 	var right_pressed = Input.is_action_pressed("ui_right")
+	var up_pressed = Input.is_action_pressed("ui_up")
+	var down_pressed =Input.is_action_pressed("ui_down")
 	
-	if (left_pressed or right_pressed):
+	if (left_pressed or right_pressed or up_pressed or down_pressed):
 		zoom_in(delta)
 	else:
 		zoom_out(delta)
@@ -33,12 +35,23 @@ func _process(delta):
 	if (right_pressed):
 		x_offset += SPEED
 		zoom_in(delta)
+	if (up_pressed):
+		y_offset -= SPEED
+		zoom_in(delta)
+	if (down_pressed):
+		y_offset += SPEED
+		zoom_in(delta)
 	var this = get_node(".")
-	this.set_pos(Vector2(this.get_pos().x + x_offset * delta, this.get_pos().y))
+	this.set_pos(Vector2(this.get_pos().x + x_offset * delta, this.get_pos().y + y_offset * delta))
 	if (this.get_pos().x < -22000):
 		this.set_pos(Vector2(-22000, this.get_pos().y))
 	elif (this.get_pos().x > 22000):
 		this.set_pos(Vector2(22000, this.get_pos().y))
+	if (this.get_pos().y < -22000):
+		this.set_pos(Vector2(this.get_pos().x, -22000))
+	elif (this.get_pos().y > 22000):
+		this.set_pos(Vector2(this.get_pos().x, 22000))
+
 
 func _ready():
 	set_process(true)
