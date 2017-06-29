@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="2.1" version_name="Godot Engine v2.1.3.stable.custom_build">
-	<ext_resource path="res://background.xml" type="PackedScene" index="1"></ext_resource>
+<resource_file type="PackedScene" subresource_count="5" version="2.1" version_name="Godot Engine v2.1.3.stable.custom_build">
+	<ext_resource path="res://alien.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://instructions.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://backgr.png" type="Texture" index="1"></ext_resource>
+	<resource type="RectangleShape2D" path="local://2">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 64, 16 </vector2>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "conns" </string>
-			<int_array  len="6"> 				2, 0, 23, 22, 2, 0 </int_array>
+			<int_array  len="6"> 				3, 0, 68, 67, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="24">
+			<string_array  len="69">
 				<string> "start" </string>
 				<string> "anchor/right" </string>
 				<string> "anchor/bottom" </string>
@@ -28,6 +34,13 @@
 				<string> "__meta__" </string>
 				<string> "Panel" </string>
 				<string> "background" </string>
+				<string> "Node2D" </string>
+				<string> "background_sprite" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/rot" </string>
+				<string> "transform/scale" </string>
+				<string> "texture" </string>
+				<string> "Sprite" </string>
 				<string> "goto_scene" </string>
 				<string> "toggle_mode" </string>
 				<string> "enabled_focus_mode" </string>
@@ -35,18 +48,56 @@
 				<string> "text" </string>
 				<string> "flat" </string>
 				<string> "Button" </string>
+				<string> "alien" </string>
+				<string> "input/pickable" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "collision/layers" </string>
+				<string> "collision/mask" </string>
+				<string> "mode" </string>
+				<string> "mass" </string>
+				<string> "friction" </string>
+				<string> "bounce" </string>
+				<string> "gravity_scale" </string>
+				<string> "custom_integrator" </string>
+				<string> "continuous_cd" </string>
+				<string> "contacts_reported" </string>
+				<string> "contact_monitor" </string>
+				<string> "sleeping" </string>
+				<string> "can_sleep" </string>
+				<string> "velocity/linear" </string>
+				<string> "velocity/angular" </string>
+				<string> "damp_override/linear" </string>
+				<string> "damp_override/angular" </string>
+				<string> "RigidBody2D" </string>
+				<string> "alien_sprite" </string>
+				<string> "alien_collisionshape" </string>
+				<string> "visibility/visible" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
+				<string> "_update_shape_index" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "RichTextLabel" </string>
+				<string> "rect/scale" </string>
+				<string> "bbcode/enabled" </string>
+				<string> "bbcode/bbcode" </string>
+				<string> "visible_characters" </string>
+				<string> "RichTextLabel1" </string>
+				<string> "RichTextLabel2" </string>
+				<string> "RichTextLabel3" </string>
 				<string> "_on_goto_scene_pressed" </string>
 				<string> "pressed" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 11 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="71"> 				-1, -1, 13, 0, -1, 12, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 4, 9, 4, 10, 4, 11, 5, 12, 6, 0, 0, 0, 2147483647, 14, 7, 0, 0, 0, 0, 21, 15, -1, 13, 3, 1, 4, 2, 5, 3, 6, 3, 7, 8, 8, 9, 9, 10, 10, 11, 16, 1, 17, 3, 18, 12, 19, 13, 20, 1, 0 </int_array>
+			<int_array  len="289"> 				-1, -1, 13, 0, -1, 12, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 4, 9, 4, 10, 4, 11, 5, 12, 6, 0, 0, 0, 15, 14, -1, 0, 0, 1, 0, 21, 16, -1, 4, 17, 7, 18, 8, 19, 9, 20, 10, 0, 0, 0, 28, 22, -1, 13, 3, 1, 4, 2, 5, 3, 6, 3, 7, 11, 8, 12, 9, 13, 10, 14, 23, 1, 24, 3, 25, 15, 26, 16, 27, 1, 0, 0, 0, 51, 29, -1, 21, 30, 1, 31, 17, 32, 18, 33, 1, 34, 0, 35, 0, 36, 19, 37, 20, 38, 20, 39, 4, 40, 20, 41, 1, 42, 21, 43, 21, 44, 1, 45, 1, 46, 2, 47, 22, 48, 4, 49, 23, 50, 23, 0, 4, 0, 21, 52, -1, 2, 17, 24, 20, 25, 0, 4, 0, 58, 53, -1, 6, 54, 1, 17, 26, 19, 27, 55, 17, 56, 1, 57, 21, 0, 0, 0, 59, 59, -1, 12, 60, 28, 3, 1, 4, 2, 5, 3, 6, 3, 7, 29, 8, 30, 9, 31, 10, 32, 61, 1, 62, 33, 63, 34, 0, 0, 0, 59, 64, -1, 12, 60, 28, 3, 1, 4, 2, 5, 3, 6, 3, 7, 35, 8, 36, 9, 32, 10, 37, 61, 1, 62, 38, 63, 34, 0, 0, 0, 59, 65, -1, 12, 60, 28, 3, 1, 4, 2, 5, 3, 6, 3, 7, 35, 8, 39, 9, 32, 10, 40, 61, 1, 62, 41, 63, 34, 0, 0, 0, 59, 66, -1, 12, 60, 28, 3, 1, 4, 2, 5, 3, 6, 3, 7, 35, 8, 42, 9, 32, 10, 43, 61, 1, 62, 44, 63, 34, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="14" shared="false">
+			<array  len="45" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -57,12 +108,43 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "Script" </string>
 				</dictionary>
+				<vector2> -11474.2, 5233.23 </vector2>
+				<real> 180.298294 </real>
+				<vector2> 64, 64 </vector2>
 				<resource  external="1">  </resource>
 				<real> 40 </real>
 				<real> 36 </real>
 				<real> 137 </real>
 				<real> 57 </real>
 				<resource name=""></resource>				<string> "Go to Start" </string>
+				<resource  resource_type="Shape2D" path="local://2">  </resource>
+				<matrix32> 2.22745, -0, 0, 16.0225, -8.72539, 1.39968 </matrix32>
+				<int> 3 </int>
+				<real> 1 </real>
+				<int> 0 </int>
+				<vector2> 0, 0 </vector2>
+				<real> -1 </real>
+				<vector2> 808.062, 311.525 </vector2>
+				<resource  external="2">  </resource>
+				<vector2> -8.72539, 1.39968 </vector2>
+				<vector2> 2.22745, 16.0225 </vector2>
+				<vector2> 2, 2 </vector2>
+				<real> 39 </real>
+				<real> 112 </real>
+				<real> 345 </real>
+				<real> 341 </real>
+				<string> "It is the year in distant future. The world is in turmoil." </string>
+				<int> -1 </int>
+				<real> 35 </real>
+				<real> 219 </real>
+				<real> 448 </real>
+				<string> "Space aliens are after the supreme dominance of the Universe." </string>
+				<real> 324 </real>
+				<real> 553 </real>
+				<string> "You can convert space aliens into wizards by hitting them with magic energy." </string>
+				<real> 440 </real>
+				<real> 669 </real>
+				<string> "On the other hand don&apos;t let them touch you." </string>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
