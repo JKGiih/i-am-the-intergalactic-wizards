@@ -13,7 +13,14 @@ func transmorph():
     w.set_pos(get_pos())
 
 func _process(delta):
-	pass
+	if (get_pos().x < -22000):
+		set_pos(Vector2(-22000, get_pos().y))
+	elif (get_pos().x > 22000):
+		set_pos(Vector2(22000, get_pos().y))
+	if (get_pos().y < -22000):
+		set_pos(Vector2(get_pos().x, -22000))
+	elif (get_pos().y > 22000):
+		set_pos(Vector2(get_pos().x, 22000))
 
 func _ready():
 	set_process(true)

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="25" version="2.1" version_name="Godot Engine v2.1.3.stable.custom_build">
-	<ext_resource path="res://planet3.png" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://backgr.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://planet1.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://planet5.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://sun.png" type="Texture" index="8"></ext_resource>
-	<ext_resource path="res://planet4.png" type="Texture" index="4"></ext_resource>
 	<ext_resource path="res://planet6.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://planet2.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://backgr.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://planet5.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://planet4.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://sun.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://planet3.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://planet1.png" type="Texture" index="7"></ext_resource>
 	<resource type="Animation" path="local://20">
 		<string name="resource/name"> "background_animation" </string>
 		<real name="length"> 120 </real>
@@ -364,15 +364,15 @@
 			<int> 0 </int>
 			<string> "values" </string>
 			<array  len="9" shared="false">
-				<vector2> 13547.9, 13686.9 </vector2>
-				<vector2> 14347.9, 14886.9 </vector2>
-				<vector2> 15547.9, 15686.9 </vector2>
-				<vector2> 16723.9, 14853.6 </vector2>
-				<vector2> 17500, 13820.2 </vector2>
-				<vector2> 16612, 12686.9 </vector2>
-				<vector2> 15524, 11753.6 </vector2>
-				<vector2> 14435.9, 12620.2 </vector2>
-				<vector2> 13547.9, 13686.9 </vector2>
+				<vector2> 13547.9, 15686.9 </vector2>
+				<vector2> 14347.9, 16886.9 </vector2>
+				<vector2> 15547.9, 17686.9 </vector2>
+				<vector2> 16723.9, 16853.6 </vector2>
+				<vector2> 17500, 15820.2 </vector2>
+				<vector2> 16612, 14186.9 </vector2>
+				<vector2> 15524, 13753.6 </vector2>
+				<vector2> 14035.9, 14620.2 </vector2>
+				<vector2> 13547.9, 15686.9 </vector2>
 			</array>
 		</dictionary>
 
@@ -575,18 +575,18 @@
 				<resource  resource_type="Shape2D" path="local://12">  </resource>
 				<resource  external="4">  </resource>
 				<resource  resource_type="Animation" path="local://13">  </resource>
-				<vector2> 12524.5, 17466.6 </vector2>
-				<real> -55.278519 </real>
+				<vector2> 11545.3, 16535.9 </vector2>
+				<real> 318.333405 </real>
 				<resource  resource_type="Shape2D" path="local://10">  </resource>
 				<resource  external="5">  </resource>
 				<resource  resource_type="Animation" path="local://11">  </resource>
-				<vector2> 17925.6, 16696.2 </vector2>
-				<real> 134.582428 </real>
+				<vector2> 13466.6, 11810.8 </vector2>
+				<real> 311.210693 </real>
 				<resource  resource_type="Shape2D" path="local://8">  </resource>
 				<resource  external="6">  </resource>
 				<resource  resource_type="Animation" path="local://9">  </resource>
-				<vector2> 15058.7, 12124.2 </vector2>
-				<real> -70.757805 </real>
+				<vector2> 16328.6, 17133.7 </vector2>
+				<real> 119.87236 </real>
 				<resource  resource_type="Shape2D" path="local://6">  </resource>
 				<matrix32> 22.4585, -0, 0, 20.973, -8.20605, 12.2324 </matrix32>
 				<resource  external="7">  </resource>

@@ -82,7 +82,7 @@ func _process(delta):
 	if (this.get_pos().y < -22000):
 		this.set_pos(Vector2(this.get_pos().x, -22000))
 	elif (this.get_pos().y > 22000):
-		this.set_pos(Vector2(this.get_pos().x, 22000))		
+		this.set_pos(Vector2(this.get_pos().x, 22000))
 
 func _ready():
 	set_process(true)
