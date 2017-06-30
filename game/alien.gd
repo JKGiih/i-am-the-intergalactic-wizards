@@ -1,5 +1,9 @@
 extends RigidBody2D
 
+var x_offset = 0;
+var y_offset = 0;
+var SPEED = 100;
+
 func die():
 	get_parent().aliens -= 1
 	get_parent().wizards += 1
@@ -25,6 +29,10 @@ func _process(delta):
 			b.transmorph()
 		elif (b.is_in_group("wizard_players")):
 			get_node("/root/global").goto_scene("res://gameover.xml")
+	
+	x_offset = rand_range(-2,2)
+	y_offset = rand_range(-4,2)
+	set_pos(Vector2(get_pos().x + x_offset * SPEED * delta, get_pos().y + y_offset * SPEED * delta))
 	
 	if (get_pos().x < -22000):
 		set_pos(Vector2(-22000, get_pos().y))
