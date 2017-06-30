@@ -3,8 +3,10 @@ extends RigidBody2D
 func die():
 	get_parent().aliens -= 1
 	get_parent().wizards += 1
+	if (get_parent().aliens == 0):
+		get_node("/root/global").goto_scene("res://gamewon.xml")
 	remove_from_group("aliens")
-	queue_free()
+	queue_free()	
 
 func transmorph():
 	var w = get_parent().wizard.instance()
@@ -21,7 +23,6 @@ func _process(delta):
 		elif (b.is_in_group("wizards")):
 			pass
 			b.transmorph()
-			die()
 		elif (b.is_in_group("wizard_players")):
 			get_node("/root/global").goto_scene("res://gameover.xml")
 	

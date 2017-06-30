@@ -9,7 +9,7 @@ var aliens = 69
 
 func _ready():
 	randomize()
-	for i in range(69):
+	for i in range(aliens):
 		var a = alien.instance()
 		a.set_pos(Vector2(rand_range(-20000, 20000), rand_range(-20000, 20000)))
 		add_child(a)
