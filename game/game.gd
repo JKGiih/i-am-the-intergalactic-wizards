@@ -15,8 +15,4 @@ func _ready():
 		add_child(a)
 	var w = wizard_player.instance()
 	w.set_pos(Vector2(11000, 14000))
-	w.add_to_group("wizard_players")
 	add_child(w)
-
-func _on_goto_scene_pressed():
-        get_node("/root/global").goto_scene("res://gameover.xml")

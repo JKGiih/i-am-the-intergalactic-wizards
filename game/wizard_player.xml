@@ -85,7 +85,7 @@
 				<resource  resource_type="Shape2D" path="local://3">  </resource>
 				<matrix32> 14.127, -0, 0, 25.1669, 0, 0 </matrix32>
 				<int> 1 </int>
-				<int> 3 </int>
+				<int> 2 </int>
 				<real> 1 </real>
 				<real> 0 </real>
 				<int> 0 </int>

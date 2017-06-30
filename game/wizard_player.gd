@@ -11,8 +11,7 @@ func die():
 	queue_free()
 
 func transmorph():
-    var alien = load("res://alien.xml")
-    var a = alien.instance()
+    var a = get_parent().alien.instance()
     die()
     get_parent().add_child(a)
     a.set_pos(get_pos())
@@ -73,16 +72,16 @@ func _process(delta):
 	if (cooldown < 0):
 		cooldown = 0
 		
-	var this = get_node(".")
-	this.set_pos(Vector2(this.get_pos().x + x_offset * delta, this.get_pos().y + y_offset * delta))
-	if (this.get_pos().x < -22000):
-		this.set_pos(Vector2(-22000, this.get_pos().y))
-	elif (this.get_pos().x > 22000):
-		this.set_pos(Vector2(22000, this.get_pos().y))
-	if (this.get_pos().y < -22000):
-		this.set_pos(Vector2(this.get_pos().x, -22000))
-	elif (this.get_pos().y > 22000):
-		this.set_pos(Vector2(this.get_pos().x, 22000))
+	set_pos(Vector2(get_pos().x + x_offset * delta, get_pos().y + y_offset * delta))
+	if (get_pos().x < -22000):
+		set_pos(Vector2(-22000, get_pos().y))
+	elif (get_pos().x > 22000):
+		set_pos(Vector2(22000, get_pos().y))
+	if (get_pos().y < -22000):
+		set_pos(Vector2(get_pos().x, -22000))
+	elif (get_pos().y > 22000):
+		set_pos(Vector2(get_pos().x, 22000))
 
 func _ready():
+	add_to_group("wizard_players")
 	set_process(true)

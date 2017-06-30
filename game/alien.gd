@@ -1,15 +1,13 @@
 extends RigidBody2D
 
-onready var wizard = load("res://wizard.xml")
-	
 func die():
 	get_parent().aliens -= 1
 	get_parent().wizards += 1
 	remove_from_group("aliens")
-	self.queue_free()
+	queue_free()
 
 func transmorph():
-	var w = wizard.instance()
+	var w = get_parent().wizard.instance()
 	get_parent().add_child(w)
 	w.set_pos(get_pos())
 	die()
@@ -21,8 +19,9 @@ func _process(delta):
 			b.life = 0
 			self.transmorph()
 		elif (b.is_in_group("wizards")):
+			pass
 			b.transmorph()
-			self.die()
+			die()
 		elif (b.is_in_group("wizard_players")):
 			get_node("/root/global").goto_scene("res://gameover.xml")
 	
