@@ -1,5 +1,6 @@
 extends Panel
 
+onready var wizard_player = preload("res://wizard_player.xml")
 onready var wizard = preload("res://wizard.xml")
 onready var alien = preload("res://alien.xml")
 
@@ -12,8 +13,9 @@ func _ready():
 		var a = alien.instance()
 		a.set_pos(Vector2(rand_range(-20000, 20000), rand_range(-20000, 20000)))
 		add_child(a)
-	var w = wizard.instance()
+	var w = wizard_player.instance()
 	w.set_pos(Vector2(11000, 14000))
+	w.add_to_group("wizard_players")
 	add_child(w)
 
 func _on_goto_scene_pressed():
