@@ -14,4 +14,5 @@ func _process(delta):
 
 func _ready():
 	add_to_group("missiles")
+	get_node("missile_sound").play("missile")
 	set_process(true)

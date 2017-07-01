@@ -43,4 +43,5 @@ func _process(delta):
 
 func _ready():
 	add_to_group("wizards")
+	get_node("wizard_sound").play("transformation")
 	set_process(true)
