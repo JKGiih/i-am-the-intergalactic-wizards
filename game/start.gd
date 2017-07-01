@@ -4,7 +4,9 @@ func _ready():
 	pass
 
 func _on_goto_game_pressed():
-        get_node("/root/global").goto_scene("res://game.xml")
+	get_node("/root/global").goto_scene("res://game.xml")
+	queue_free()
 
 func _on_goto_instructions_pressed():
-        get_node("/root/global").goto_scene("res://instructions.xml")
+	get_node("/root/global").goto_scene("res://instructions.xml")
+	queue_free()
